@@ -24,6 +24,8 @@ class PixArtInterface(object):
         # Check input size:
         if pixel_array.shape != self.image_shape:
             rospy.logerr("Input pixel array size does not match the expected size")
+            rospy.logerr(f"Input size: {pixel_array.shape}")
+            rospy.logerr(f"Expected size: {self.image_shape}")
             return
 
         # Publish the pixel angles to the respective module topics

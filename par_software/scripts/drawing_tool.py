@@ -75,7 +75,7 @@ if __name__ == '__main__':
         rospy.init_node('par_commander', anonymous=True)
 
         # Create a PixArtInterface instance:
-        par_interface = PixArtInterface(module_size = 4, display_shape = [2,2])
+        par_interface = PixArtInterface(module_size = 4, display_shape = [2,3])
 
         '''
         Testing functionality:
@@ -86,7 +86,7 @@ if __name__ == '__main__':
         display_shape = par_interface.display_shape
         module_size = par_interface.module_size
 
-        on_off_dict = {"on": 30, "off": 0}
+        on_off_dict = {"on": 255, "off": 0}
         drawing_tool = DrawingTool(robot = par_interface, on_off_dict = on_off_dict)
         drawing_tool.run()
 
