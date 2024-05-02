@@ -64,7 +64,7 @@ if __name__ == '__main__':
         rospy.init_node('camera_tool', anonymous=True)
 
         # Create a PixArtInterface instance
-        par_interface = PixArtInterface(module_size=4, display_shape=[2, 3])
+        par_interface = PixArtInterface(module_size=4, display_shape=[3, 3])
 
         # Create a CameraTool instance
         camera_tool = CameraTool(robot=par_interface)
